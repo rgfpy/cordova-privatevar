@@ -9,7 +9,7 @@
 		<engine name="cordova" version=">=3.0.0"/>
 	</engines>
 	
-	<js-module name="PrivatevarPlugin" src="www/privatevar/privatevar.js">
+	<js-module name="PrivatevarPlugin" src="www/privatevar/main.js">
 		<clobbers target="privatevar" />
 	</js-module>
 	
