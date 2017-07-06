@@ -1,4 +1,4 @@
-package com.sistepar.plugin;
+package com.sistepar.cordova.privatevar;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaArgs;
@@ -8,12 +8,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class PrivatevarPlugin extends CordovaPlugin {
-	/**
-     * Constructor.
-     */
-    public PrivatevarPlugin() {
-    }
-	
     @Override
     public boolean execute(String action, final CordovaArgs args, final CallbackContext callback) throws JSONException {
 
@@ -22,12 +16,13 @@ public class PrivatevarPlugin extends CordovaPlugin {
                 @Override
                 public void run() {
                     JSONObject json = new JSONObject();
-
+					
+					/* Editar Json para devolver parámetros */
                     try {
                         json.put("apiUrl", "http://api.sistepar.com");
                         json.put("apiKey", "12345678");
                     } catch (JSONException e) {
-                        e.printStackTrace();
+                        callback.error("Error al crear Json en PrivatevarPlugin");
                     }
 
                     PluginResult result = new PluginResult(PluginResult.Status.OK, json);
