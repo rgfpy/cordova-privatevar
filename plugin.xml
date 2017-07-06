@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin id="com.sistepar.plugin" version="0.0.1" xmlns:android="http://schemas.android.com/apk/res/android" xmlns="http://apache.org/cordova/ns/plugins/1.0">
-	<name>Private var</name>
-	<description>To get data sensitive</description>
+<plugin id="com.sistepar.cordova.plugin" version="0.0.2" xmlns:android="http://schemas.android.com/apk/res/android" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+	<name>Private Variable</name>
+	<description>To get data sensitive from java native</description>
 	<author>sistepar.com</author>
     <license>MIT Licence</license>
 	<keywords>cordova,private,variable</keywords>
@@ -9,16 +9,16 @@
 		<engine name="cordova" version=">=3.0.0"/>
 	</engines>
 	
-	<js-module name="PrivatevarPlugin" src="www/privatevar/main.js">
-		<clobbers target="privatevar" />
+	<js-module name="PrivatevarPlugin" src="www/privatevar.js">
+		<clobbers target="pVar" />
 	</js-module>
 	
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="PrivatevarPlugin">
-				<param name="android-package" value="com.sistepar.plugin.PrivatevarPlugin"/>
+				<param name="android-package" value="com.sistepar.cordova.plugin.PrivatevarPlugin"/>
 			</feature>
 		</config-file>
-		<source-file src="src/android/PrivatevarPlugin.java" target-dir="src/com/sistepar/plugin"/>
+		<source-file src="src/android/PrivatevarPlugin.java" target-dir="src/com/sistepar/cordova/plugin"/>
 	</platform>
 </plugin>

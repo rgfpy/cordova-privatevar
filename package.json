@@ -1,7 +1,7 @@
 {
-  "version": "0.0.1",
-  "name": "com.sistepar.plugin",
-  "cordova_name": "Private var",
+  "version": "0.0.2",
+  "name": "com.sistepar.cordova.plugin",
+  "cordova_name": "Private Variable",
   "platforms": [
     "android"
   ],
@@ -11,7 +11,7 @@
       "version": ">=3.0.0"
     }
   ],
-  "description": "To get data sensitive",
+  "description": "To get data sensitive from java native",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rgfpy/cordova-privatevar.git"

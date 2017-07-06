@@ -4,8 +4,8 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
-import org.json.JSONArray;
 import org.json.JSONException;
+import org.json.JSONObject;
 
 public class PrivatevarPlugin extends CordovaPlugin {
 	/**
@@ -21,17 +21,16 @@ public class PrivatevarPlugin extends CordovaPlugin {
 			cordova.getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    String name = "";
+                    JSONObject json = new JSONObject();
 
                     try {
-                        name = args.getString(0);
+                        json.put("apiUrl", "http://api.sistepar.com");
+                        json.put("apiKey", "12345678");
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
 
-                    final String message = "Hello, " + name;
-
-                    PluginResult result = new PluginResult(PluginResult.Status.OK, message);
+                    PluginResult result = new PluginResult(PluginResult.Status.OK, json);
                     callback.sendPluginResult(result);
                 }
             });
