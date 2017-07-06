@@ -1,6 +1,7 @@
 package com.sistepar.plugin;
 
 import org.apache.cordova.CallbackContext;
+import org.apache.cordova.CordovaArgs;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
@@ -14,16 +15,24 @@ public class PrivatevarPlugin extends CordovaPlugin {
     }
 	
     @Override
-    public boolean execute(String action, JSONArray args, final CallbackContext callback) throws JSONException {
+    public boolean execute(String action, final CordovaArgs args, final CallbackContext callback) throws JSONException {
 
         if (action.equals("get")) {
 			cordova.getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    final String name = args.getString(0);
-					final String message = "Hello, " + name;
-					
-					callback.getData(message);
+                    String name = "";
+
+                    try {
+                        name = args.getString(0);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+                    final String message = "Hello, " + name;
+
+                    PluginResult result = new PluginResult(PluginResult.Status.OK, message);
+                    callback.sendPluginResult(result);
                 }
             });
 
