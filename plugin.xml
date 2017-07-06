@@ -1,28 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.sistemar.customprivatevar"
-        version="0.7.0">
-
-  <name>customprivatevar</name>
-
-  <engines>
-    <engine name="cordova" version=">=6.0.0"/>
-  </engines>
-
-  <asset src="www/customprivatevar/main.js" target="js/customprivatevar/main.js"/>
-
-  <js-module src="www/customprivatevar/main.js" name="customprivatevar">
-    <clobbers target="customprivatevar" />
-  </js-module>
-
-  <platform name="android">
-
-    <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="customprivatevar">
-        <param name="android-package" value="com.sistepar.customprivatevar"/>
-      </feature>
-    </config-file>
-
-    <source-file src="src/android/Customprivatevar.java" target-dir="src/com/sistepar/plugin/"/>
-  </platform>
+        id="com.sistemar.privatevar" version="0.2.3">
+	<name>Private-var</name>
+	<description>To get data sensitive</description>
+    <license>MIT Licence</license>
+	<keywords>cordova,private,variable</keywords>
+	<engines>
+		<engine name="cordova" version=">=6.0.0"/>
+	</engines>
+	
+	<asset src="www/privatevar/main.js" target="js/privatevar/main.js"/>
+	
+	<js-module src="www/privatevar/main.js" name="privatevar">
+		<clobbers target="privatevar" />
+	</js-module>
+	
+	<platform name="android">
+		<config-file target="config.xml" parent="/*">
+			<feature name="privatevar">
+				<param name="android-package" value="com.sistepar.privatevar"/>
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+		<source-file src="src/android/Privatevar.java" target-dir="src/org/apache/cordova/plugin"/>
+	</platform>
 </plugin>
