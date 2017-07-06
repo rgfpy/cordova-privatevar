@@ -5,6 +5,7 @@ El plugin sirve para usar como base para crear tus propios plugins para Cordova.
 El plugin es sencillo se crea una función "get" que recibe y devuelve parámetros de tipo JSON.
 
 * Para agregar desde el CLI de Cordova:
+
 	cordova plugin add https://github.com/rgfpy/cordova-privatevar.git
 
 En la sección del código Java en com/sistepar/cordova/plugin/PrivatevarPlugin.java se puede agregar todos los datos 
