@@ -1,4 +1,4 @@
-# Robert Galeano - sistepar.com <@rgfpy>
+# Cordova - Private Variable
 
 El plugin sirve para usar como base para crear tus propios plugins para Cordova.
 
