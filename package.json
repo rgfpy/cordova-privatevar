@@ -1,0 +1,31 @@
+{
+  "version": "0.0.1",
+  "name": "com.sistepar.plugin",
+  "cordova_name": "Private var",
+  "platforms": [
+    "android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "description": "To get data sensitive",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgfpy/cordova-privatevar.git"
+  },
+  "keywords": [
+    "sistepar",
+    "cordova",
+    "private",
+    "variable",
+	"hide",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Sistepar",
+  "license": "MIT Licence",
+  "homepage": "sistepar.com"
+}
