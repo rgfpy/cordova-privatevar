@@ -1,6 +1,6 @@
 {
   "version": "0.0.3",
-  "name": "com.sistepar.cordova.privatevar",
+  "name": "com-sistepar-cordova-privatevar",
   "cordova_name": "Private Variable",
   "platforms": [
     "android"
