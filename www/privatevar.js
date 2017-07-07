@@ -1,4 +1,4 @@
-cordova.define("com-sistepar-cordova-privatevar", function(require, exports, module) {
+cordova.define("com-sistepar-cordova-privatevar.PrivatevarPlugin", function(require, exports, module) {
 var exec = require('cordova/exec');
 var platform = require('cordova/platform');
 	
